@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Klee+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #CAA8A8;
+    color: whitesmoke;
+    font-family: 'Klee One', cursive;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 66px;
+    padding: 20px;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+}
+
+section button {
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'Klee One', cursive;;
+    cursor: pointer;
+}
+
+
+.book {
+    outline: 4px solid black;
+    width: 30%;
+    margin-top: 100px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: aliceblue;
+    color: black;
+}
+
+.book p {
+    padding: 20px;
+}
+
+.form {
+    display: none;
+}
+
