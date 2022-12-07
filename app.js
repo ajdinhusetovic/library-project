@@ -12,11 +12,9 @@ const authorInput = document.querySelector('#author-input');
 const pageInput = document.querySelector('#page-input');
 const submitBtn = document.querySelector('#submit');
 
+// form container
+const formContainer = document.querySelector('.form-container');
 
-// array of objects that stores the books
-let books = [
-    
-]
 
 // book class
 class Book {
@@ -32,17 +30,12 @@ submitBtn.addEventListener('click', (event) => {
     event.preventDefault();
 
     let book1 = new Book(titleInput.value, authorInput.value, pageInput.value);
-    console.log(book1.name);
-    console.log(book1.author);
-    console.log(book1.pages);
-
     const bookDiv = document.createElement('div');
     bookDiv.innerHTML = 
-    `<p id="title">${book1.name}</p>
+    `<p id="title">"${book1.name}"</p>
     <p id="author">${book1.author}</p>
     <p id="pages">${book1.pages}</p>
     `;
     bookDiv.classList.add('book');
     bookContainer.appendChild(bookDiv);
-
 })
