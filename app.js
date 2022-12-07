@@ -22,12 +22,6 @@ const cleanInput = () => {
     pageInput.value = '';
 }
 
-const checkEmptyInput = () => {
-    if (titleInput.value === '' || authorInput.value === '' || pageInput.value === 0){
-        alert("Empty input");
-    }
-}
-
 // book class
 class Book {
     constructor(name, author, pages) {
@@ -48,9 +42,9 @@ submitBtn.addEventListener('click', (event) => {
         let book1 = new Book(titleInput.value, authorInput.value, pageInput.value);
         const bookDiv = document.createElement('div');
         bookDiv.innerHTML = 
-        `<p id="title">"${book1.name}"</p>
-        <p id="author">${book1.author}</p>
-        <p id="pages">${book1.pages}</p>
+        `<p id="title">Title: "${book1.name}"</p>
+        <p id="author">Author: ${book1.author}</p>
+        <p id="pages">Pages: ${book1.pages}</p>
         `;
         bookDiv.classList.add('book');
         bookContainer.appendChild(bookDiv);
