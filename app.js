@@ -36,5 +36,13 @@ submitBtn.addEventListener('click', (event) => {
     console.log(book1.author);
     console.log(book1.pages);
 
+    const bookDiv = document.createElement('div');
+    bookDiv.innerHTML = 
+    `<p id="title">${book1.name}</p>
+    <p id="author">${book1.author}</p>
+    <p id="pages">${book1.pages}</p>
+    `;
+    bookDiv.classList.add('book');
+    bookContainer.appendChild(bookDiv);
 
 })
