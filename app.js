@@ -15,6 +15,9 @@ const submitBtn = document.querySelector('#submit');
 // form container
 const formContainer = document.querySelector('.form-container');
 
+// new book button
+const newBook = document.querySelector('#new-book');
+
 
 // book class
 class Book {
@@ -24,6 +27,12 @@ class Book {
         this.pages = pages;
     }
 }
+
+// event listener for the "+ NEW BOOK" button to show form
+newBook.addEventListener('click', () => {
+    formContainer.style = "display: block;"
+})
+
 
 // event listener for the book submit form
 submitBtn.addEventListener('click', (event) => {

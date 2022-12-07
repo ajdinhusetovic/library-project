@@ -37,6 +37,7 @@ header h1 {
 section {
     display: flex;
     justify-content: center;
+    margin: 20px;
 }
 
 section button {
@@ -71,6 +72,7 @@ section button {
     color: black;
     border-radius: 12px;
     background-color: aliceblue;
+    margin-bottom: 30px;
 }
 
 .book p {
@@ -92,7 +94,8 @@ section button {
     height: 400px;
     width: 400px;
     display: flex;
-    outline: 2px solid black;
+    outline: 5px solid black;
+    border-radius: 12px;
     justify-content: center;
     align-items: center;
     margin-top: 150px;
@@ -126,5 +129,15 @@ form button {
     font-size: 20px;
     margin-top: 8px;
     cursor: pointer;
+}
+
+footer {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 60px;
+    background-color: black;
+    font-size: 22px;
+    font-weight: 600;
 }
 
