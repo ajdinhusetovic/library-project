@@ -53,6 +53,13 @@ section button {
     cursor: pointer;
 }
 
+.book-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
 
 
 .book {
