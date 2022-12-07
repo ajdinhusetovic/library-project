@@ -15,9 +15,18 @@ const submitBtn = document.querySelector('#submit');
 // form container
 const formContainer = document.querySelector('.form-container');
 
-// new book button
-const newBook = document.querySelector('#new-book');
 
+const cleanInput = () => {
+    titleInput.value = '';
+    authorInput.value = '';
+    pageInput.value = '';
+}
+
+const checkEmptyInput = () => {
+    if (titleInput.value === '' || authorInput.value === '' || pageInput.value === 0){
+        alert("Empty input");
+    }
+}
 
 // book class
 class Book {
@@ -28,23 +37,23 @@ class Book {
     }
 }
 
-// event listener for the "+ NEW BOOK" button to show form
-newBook.addEventListener('click', () => {
-    formContainer.style = "display: block;"
-})
-
-
 // event listener for the book submit form
 submitBtn.addEventListener('click', (event) => {
     event.preventDefault();
 
-    let book1 = new Book(titleInput.value, authorInput.value, pageInput.value);
-    const bookDiv = document.createElement('div');
-    bookDiv.innerHTML = 
-    `<p id="title">"${book1.name}"</p>
-    <p id="author">${book1.author}</p>
-    <p id="pages">${book1.pages}</p>
-    `;
-    bookDiv.classList.add('book');
-    bookContainer.appendChild(bookDiv);
+    // checks if the input alerts are empty or not
+    if (titleInput.value === '' || authorInput.value === '' || pageInput.value === 0){
+        alert("Empty input")
+    }else {
+        let book1 = new Book(titleInput.value, authorInput.value, pageInput.value);
+        const bookDiv = document.createElement('div');
+        bookDiv.innerHTML = 
+        `<p id="title">"${book1.name}"</p>
+        <p id="author">${book1.author}</p>
+        <p id="pages">${book1.pages}</p>
+        `;
+        bookDiv.classList.add('book');
+        bookContainer.appendChild(bookDiv);
+    }
+    cleanInput();
 })
